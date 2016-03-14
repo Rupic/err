@@ -1,0 +1,154 @@
+pkgin in dalmatinerfe dalmatinerdb nsq tachyon
+calculating dependencies... done.
+
+nothing to upgrade.
+14 packages to be installed (355M to download, 214M to install):
+
+db4-4.8.30 tcp_wrappers-7.6.4 libltdl-2.4.2 unixodbc-2.3.0nb2 openldap-client-2.4.40 cyrus-sasl-2.1.26nb4 sudo-1.7.10p9 erlang-18.0nb1 coreutils-8.22nb1 grep-2.21 dalmatinerfe-0.1.5 dalmatinerdb-0.1.4p1 nsq-0.3.5 tachyon-0.8.0
+
+proceed ? [Y/n] 
+downloading packages...
+db4-4.8.30.tgz                                             100%   22MB   5.5MB/s   1.3MB/s   00:04    
+tcp_wrappers-7.6.4.tgz                                     100%  107KB 107.1KB/s 107.1KB/s   00:00    
+libltdl-2.4.2.tgz                                          100%   49KB  49.4KB/s  49.4KB/s   00:00    
+unixodbc-2.3.0nb2.tgz                                      100% 1145KB   1.1MB/s   1.1MB/s   00:00    
+openldap-client-2.4.40.tgz                                 100% 1220KB   1.2MB/s   1.2MB/s   00:00    
+cyrus-sasl-2.1.26nb4.tgz                                   100%  506KB 505.8KB/s 505.8KB/s   00:00    
+sudo-1.7.10p9.tgz                                          100%  514KB 514.3KB/s 514.3KB/s   00:01    
+erlang-18.0nb1.tgz                                         100%   45MB   5.6MB/s   3.5MB/s   00:08    
+coreutils-8.22nb1.tgz                                      100% 7584KB   3.7MB/s   1.2MB/s   00:02    
+grep-2.21.tgz                                              100%  299KB 299.2KB/s 299.2KB/s   00:00    
+dalmatinerfe-0.1.5.tgz                                     100%   12MB   6.2MB/s   2.3MB/s   00:02    
+dalmatinerdb-0.1.4p1.tgz                                   100%  234MB   9.7MB/s   2.9MB/s   00:24    
+nsq-0.3.5.tgz                                              100%   18MB   9.3MB/s   9.2MB/s   00:02    
+tachyon-0.8.0.tgz                                          100%   12MB   6.0MB/s   8.0MB/s   00:02    
+installing packages...
+installing db4-4.8.30...
+installing tcp_wrappers-7.6.4...
+installing libltdl-2.4.2...
+installing unixodbc-2.3.0nb2...
+unixodbc-2.3.0nb2: copying /opt/local/share/examples/unixodbc/odbc.ini to /opt/local/etc/odbc.ini
+installing openldap-client-2.4.40...
+cyrus-sasl-2.1.26nb4: Creating user ``cyrus''
+passwd: password information changed for cyrus
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2011/09/17 11:32:02 obache Exp $
+
+cyrus-sasl-2.1.26nb4 by default does *not* install any authentication plugin
+modules.  Until the necessary authentication plugin modules are
+installed, e.g. security/cy2-crammd5 or security/cy2-gssapi, you
+will probably get errors about "no appropriate mechs available".
+
+cyrus-sasl-2.1.26nb4 will use the following directory as the default
+path to its plugin modules:
+
+	/opt/local/lib/sasl2
+
+The search path for plugin modules can be customized by setting the
+SASL_PATH variable to a colon-delimted list of directories in the shell
+environment.
+
+To allow plaintext authentication without using the auxprop mechanism, the
+package security/cyrus-saslauthd should be installed.
+
+===========================================================================
+openldap-client-2.4.40: copying /opt/local/share/examples/openldap/ldap.conf to /opt/local/etc/openldap/ldap.conf
+installing cyrus-sasl-2.1.26nb4...
+installing sudo-1.7.10p9...
+sudo-1.7.10p9: copying /opt/local/share/examples/sudo/sudoers to /opt/local/etc/sudoers
+sudo-1.7.10p9: setting permissions on /opt/local/bin/sudo (o=root, g=root, m=4511)
+sudo-1.7.10p9: setting permissions on /opt/local/bin/sudoreplay (o=root, g=root, m=511)
+===========================================================================
+$NetBSD: MESSAGE,v 1.6 2004/03/11 23:33:09 reed Exp $
+
+Use the visudo(8) command to edit the sudoers file.
+
+If you are upgrading from a version of sudo prior to 1.6, please read
+
+	/opt/local/share/doc/sudo/UPGRADE
+
+on how to modify your sudoers file appropriately.
+===========================================================================
+installing erlang-18.0nb1...
+===========================================================================
+This package has SMF support.  You may use svcadm(1M) to 'enable', 'disable'
+or 'restart' services.  To enable the instance(s) for this package, run:
+
+	/usr/sbin/svcadm enable -r svc:/pkgsrc/epmd:default
+
+Use svcs(1) to check on service status.  See smf(5) for more information.
+===========================================================================
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2007/07/28 14:27:09 obache Exp $
+
+To use GS (Graphic System), please install x11/tk.
+
+===========================================================================
+installing coreutils-8.22nb1...
+coreutils-8.22nb1: registering info file /opt/local/info/coreutils.info
+installing grep-2.21...
+grep-2.21: registering info file /opt/local/info/grep.info
+installing dalmatinerfe-0.1.5...
+Creating dalmatinerfe group ...
+Creating dalmatinerfe user ...
+Creating directories ...
+Importing service ...
+Trying to guess configuration ...
+Creating new configuration from example file.
+installing dalmatinerdb-0.1.4p1...
+Group already exists, skipping creation.
+User already exists, skipping creation.
+Creating directories ...
+Importing service ...
+Trying to guess configuration ...
+Creating new configuration from example file.
+installing nsq-0.3.5...
+.------------------------------------------------------------------------------.
+|                                                                              |
+| NSQ messaging queue.                                                         |
+|                                                                              |
+`------------------------------------------------------------------------------'
+
+installing tachyon-0.8.0...
+Creating tachyon group ...
+Creating tachyon user ...
+Creating directories ...
+Importing service ...
+Creating new configuration from example file.
+pkg_install warnings: 0, errors: 3
+pkg_install error log can be found in /var/db/pkgin/pkg_install-err.log
+reading local summary...
+processing local summary...
+updating database: 100%
+no such installed package dalmatinerfe
+no such installed package dalmatinerdb
+marking nsq-0.3.5 as non auto-removable
+
+
+cat /var/db/pkgin/pkg_install-err.log
+
+---Mar 14 19:48:36: installing dalmatinerfe-0.1.5...
+UX: groupadd: dalmatiner name too long.
+UX: useradd: dalmatiner name too long.
+UX: useradd: dalmatiner name too long.
+cp: cannot stat '/opt/local/fifo-dalmatinerfe/etc/dfe.conf.example': No such file or directory
+cp: cannot stat '/data/dalmatinerfe/etc/dfe.conf.example': No such file or directory
+sed: /data/dalmatinerfe/etc/dfe.conf: No such file or directory
+pkg_add: install script returned error status
+pkg_add: 1 package addition failed
+---Mar 14 19:48:40: installing dalmatinerdb-0.1.4p1...
+chown: cannot access '/var/db/dalmatinerdb/ring': No such file or directory
+svccfg: Unable to stat file /opt/local/dalmatinerdb/share/ddb.xml.  No such file or directory
+cp: cannot stat '/opt/local/dalmatinerdb/etc/dalmatinerdb.conf.example': No such file or directory
+sed: /opt/local/dalmatinerdb/etc/dalmatinerdb.conf: No such file or directory
+pkg_add: install script returned error status
+pkg_add: 1 package addition failed
+---Mar 14 19:48:45: installing nsq-0.3.5...
+---Mar 14 19:48:46: installing tachyon-0.8.0...
+cp: cannot stat '/opt/local/tachyon/etc/tachyon.conf.exmaple': No such file or directory
+cp: cannot stat '/opt/local/tachyon/etc/tachyon.rules.exmaple': No such file or directory
+cp: cannot stat '/data/tachyon/etc/tachyon.rules.example': No such file or directory
+cp: cannot stat '/data/tachyon/etc/tachyon.conf.example': No such file or directory
+pkg_add: install script returned error status
+pkg_add: 1 package addition failed
+
